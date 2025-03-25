@@ -8,6 +8,11 @@
 - Определение тела функции
 - Модификаторы доступа
 
+### Contexts
+
+- [Namespace](namespaces.md)
+- [Classes](classes.md)
+
 ##### Пример
 
 Xpath:

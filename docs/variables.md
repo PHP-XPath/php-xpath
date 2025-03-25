@@ -7,6 +7,14 @@
 - Определение значения по умолчанию
 - Модификаторы доступа
 
+### Contexts
+
+- [Namespace](namespaces.md)
+- [Classes](classes.md)
+- [Functions](functions.md)
+  - [Parameters](functions.md#parameters)
+  - [Body](functions.md#body)
+
 ##### Пример
 
 Xpath:
