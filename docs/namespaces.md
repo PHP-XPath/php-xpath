@@ -10,7 +10,9 @@ Empty.
 ##### Пример
 
 Xpath:
-`\A\B`
+```
+\A\B
+```
 
 Кодовая база:
 ```php
@@ -34,3 +36,37 @@ namespace A\B {
 }
 // end
 ```
+
+## Targeting
+
+Ссылка на `namespace` указывает только на область, которую описывает ключевое слово `namespace`.
+
+##### Пример
+
+File 1:
+```
+src/Controller/A.php
+```
+Content:
+```php
+<?php
+
+namespace App\Controller;
+
+class A {}
+```
+
+File 2:
+```
+src/Controller/B.php
+```
+Content:
+```php
+<?php
+
+namespace App\Controller;
+
+class B {}
+```
+
+Namespace `\App\Controller` будет указывать на два пространства имен в обоих файлах.

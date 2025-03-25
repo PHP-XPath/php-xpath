@@ -64,3 +64,44 @@ function method1() {}
 - `method1()[body]`
 - `method1()[body]$variable`
 
+
+## Targeting
+
+Ссылка на `function` указывает только на определение функции, которое находится внутри контекста.
+
+File 1:
+```
+src/Utils/Std.php
+```
+Content:
+```php
+<?php
+
+namespace App\Utils;
+
+class Std {
+  public function time() {}
+}
+```
+
+File 2:
+```
+src/functions.php
+```
+Content:
+```php
+<?php
+
+namespace App;
+
+function time() {}
+```
+
+Function `time()` будет указывать на три функции:
+- \App\Utils\Std::time()
+- \App::time()
+- time()
+
+В контексте `\App`, функция `time()` будет указывать только на 1 функцию, внутри `src/functions.php`
+В контексте `\App\Utils`, функция `time()` будет указывать только на 1 функцию, внутри класса `Std` в файле `src/Utils/Std.php`
+В контексте `\`, функция `time()` будет указывать только на 1 функцию из стандартной библиотеки.

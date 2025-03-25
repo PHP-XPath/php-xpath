@@ -59,3 +59,38 @@ namespace A\B {
 
 - `C[constants]`
 
+## Targeting
+
+Ссылка на `class` указывает только на определение класса, которое находится внутри контекста.
+
+
+File 1:
+```
+src/Domain/Auth/User.php
+```
+Content:
+```php
+<?php
+
+namespace Domain\Auth;
+
+class User {}
+```
+
+File 2:
+```
+src/Domain/Forum/User.php
+```
+Content:
+```php
+<?php
+
+namespace Domain\Forum;
+
+class User {}
+```
+
+Class `User` будет указывать на два класса в обоих `namespace`.
+
+В контексте `\Domain\Auth`, класс `User` будет указывать только на 1 класс.
+Полная запись будет определяться конкатенацией через обратную косую черту: `\Domain\Auth\User`.
