@@ -1,4 +1,4 @@
-### Function
+# Function
 
 Указывает на `function` конструкцию.
 Указывает на все объявления функций или методов класса.
@@ -32,4 +32,30 @@ class C {
 function method1() {}
 ```
 
+## Return type
+
+Указывает на тип возвращаемого значения.
+
+##### Пример
+
+- `method1()[returnType]`
+- `method1()[returnType][0]`
+
+## Parameters
+
+Указывает на принимаемые методом параметры.
+
+##### Пример
+
+- `method1()[parameters]`
+- `method1()[parameters]$prop1`
+
+## Body
+
+Указывает на тип возвращаемого значения.
+
+##### Пример
+
+- `method1()[body]`
+- `method1()[body]$variable`
 
